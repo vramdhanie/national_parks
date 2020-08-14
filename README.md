@@ -32,6 +32,14 @@ code .
 
 ## Screen Shots
 
+The initial application should look like the following screenshots:
+
+<img src="screenshots/iphone.png" style="width:200px" alt="Mobile view">
+
+<img src="screenshots/ipad.png" style="width:300px" alt="Mobile view">
+
+<img src="screenshots/laptop.png" style="width:400px" alt="Mobile view">
+
 ## License
 
 This code is [MIT Licensed](LICENSE)
