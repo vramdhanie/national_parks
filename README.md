@@ -34,11 +34,11 @@ code .
 
 The initial application should look like the following screenshots:
 
-<img src="screenshots/iphone.png" style="width:200px" alt="Mobile view">
+![Mobile screen](screenshots/iphone.png)
 
-<img src="screenshots/ipad.png" style="width:300px" alt="Mobile view">
+![Tablet screen](screenshots/ipad.png)
 
-<img src="screenshots/laptop.png" style="width:400px" alt="Mobile view">
+![Desktop screen](screenshots/laptop.png)
 
 ## License
 
