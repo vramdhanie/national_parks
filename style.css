@@ -130,6 +130,12 @@ main {
   text-align: center;
 }
 
+.inputForm .error {
+  font-size: 0.8rem;
+  color: #bb0000;
+  display: none;
+}
+
 @media screen and (min-width: 600px) {
   main {
     grid-template-columns: repeat(2, 1fr);
