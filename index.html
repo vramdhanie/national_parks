@@ -39,7 +39,7 @@
         <label for="established">Established</label>
         <input
           type="text"
-          name="established"
+          name="parkEstablished"
           id="established"
           title="Established"
           placeholder="July 4, 1776"
@@ -48,23 +48,25 @@
         <label for="area">Area</label>
         <input
           type="text"
-          name="area"
+          name="parkArea"
           id="area"
           title="Area"
           placeholder="1 acre"
         />
-        <div class="error" id="areaError">Please enter a name</div>
+        <div class="error" id="areaError">Please enter the area</div>
         <label for="rating">Rating</label>
         <input
           type="number"
           min="1"
           max="5"
-          name="rating"
+          name="parkRating"
           id="rating"
           title="rating"
           placeholder="4.9"
         />
-        <div class="error" id="ratingError">Please enter a name</div>
+        <div class="error" id="ratingError">
+          Please enter the rating between 1 and 5 inclusive.
+        </div>
         <div class="formControl">
           <button type="submit" id="addBtn">Add</button>
         </div>
