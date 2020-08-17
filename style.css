@@ -29,6 +29,12 @@ main {
   max-width: 1400px;
 }
 
+.sorter {
+  width: 90%;
+  margin: 0 auto;
+  padding: 6px;
+}
+
 .park {
   box-shadow: 0 0 3px 2px rgba(115, 66, 48, 0.2);
   border-radius: 6px;
