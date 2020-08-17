@@ -105,6 +105,31 @@ main {
   color: rgba(255, 255, 255, 0.5);
 }
 
+.inputForm {
+  width: 90%;
+  max-width: 350px;
+  padding: 6px;
+  margin: 6px auto;
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.3);
+}
+
+.inputForm label {
+  font-weight: bold;
+  display: block;
+  margin-top: 4px;
+}
+
+.inputForm input,
+.inputForm textarea {
+  width: 100%;
+}
+
+.inputForm .formControl {
+  padding: 6px;
+  text-align: center;
+}
+
 @media screen and (min-width: 600px) {
   main {
     grid-template-columns: repeat(2, 1fr);
