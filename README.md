@@ -1,6 +1,6 @@
 # National Parks
 
-_Sample project for Front End Web Development course at Thinkful_
+_Starter project for Front End Web Development JavaScript and the DOM module_
 
 ## Introduction
 
@@ -8,14 +8,14 @@ This starter project is used for illustrating the DOM and using JavaScript to in
 
 ## View Demo
 
-For a demonstration of the page visit [this link](https://vramdhanie.github.io/national_parks/).
+For a demonstration of the page visit [this link](https://thinkful-ed.github.io/national_parks/index.html).
 
 ## Getting started
 
 Clone this repository to your local machine.
 
 ```bash
-git clone https://github.com/vramdhanie/national_parks.git
+git clone https://github.com/thinkful-ed/national_parks.git
 ```
 
 Navigate to the folder containing the repository and start a local server:
