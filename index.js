@@ -2,7 +2,7 @@
 
 const descriptions = document.querySelectorAll(".description");
 
-for (desc of descriptions.values()) {
+for (let desc of descriptions.values()) {
   let content = desc.innerText;
 
   if (content.length > 250) {
@@ -16,7 +16,7 @@ for (desc of descriptions.values()) {
 // select all rating values
 const ratings = document.querySelectorAll(".rating .value");
 
-for (rating of ratings) {
+for (let rating of ratings) {
   let ratingValue = parseFloat(rating.innerText);
 
   if (ratingValue > 4.7) {
