@@ -20,7 +20,7 @@ for (rating of ratings) {
   let ratingValue = parseFloat(rating.innerText);
 
   if (ratingValue > 4.7) {
-    rating.classList.add("high_rating");
+    rating.classList.add("high-rating");
     rating.classList.remove("value");
   }
 }
@@ -36,7 +36,7 @@ const newElement = document.createElement("div");
 newElement.innerText = `${numberParks} exciting parks to visit`;
 
 //add the class
-newElement.classList.add("header_statement");
+newElement.classList.add("header-statement");
 
 // insert the new element
 const header = document.querySelector("header");
