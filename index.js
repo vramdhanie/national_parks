@@ -1,7 +1,7 @@
 const submitHandler = (event) => {
   event.preventDefault();
 
-  const form = document.querySelector("#parkForm");
+  const form = event.target;
   const formData = new FormData(form);
 
   // Keep track of if any errors are found
