@@ -12,60 +12,72 @@
     </header>
     <div class="inputForm">
       <h2>Add a new park</h2>
-      <form action="" id="parkForm">
-        <label for="parkName">Name</label>
-        <input
-          type="text"
-          name="parkName"
-          id="parkName"
-          title="Park name"
-          placeholder="Name of park"
-        />
-        <div class="error" id="nameError">Please enter a name</div>
-        <label for="parkLocation">Location</label>
-        <input
-          type="text"
-          name="parkLocation"
-          id="parkLocation"
-          title="Park location"
-          placeholder="State, United States"
-        />
-        <div class="error" id="locationError">Please enter a location</div>
-        <label for="parkDescription">Description</label>
-        <textarea name="parkDescription" id="parkDescription"></textarea>
-        <div class="error" id="descriptionError">
-          Please enter a short description
+      <form action="" id="parkForm" novalidate>
+        <div id="park_name">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            title="Park name"
+            placeholder="Name of park"
+          />
+          <div class="error" id="nameError">Please enter a name</div>
         </div>
-        <label for="established">Established</label>
-        <input
-          type="text"
-          name="parkEstablished"
-          id="established"
-          title="Established"
-          placeholder="July 4, 1776"
-        />
-        <div class="error" id="establishedError">Please enter a date</div>
-        <label for="area">Area</label>
-        <input
-          type="text"
-          name="parkArea"
-          id="area"
-          title="Area"
-          placeholder="1 acre"
-        />
-        <div class="error" id="areaError">Please enter the area</div>
-        <label for="rating">Rating</label>
-        <input
-          type="number"
-          min="1"
-          max="5"
-          name="parkRating"
-          id="rating"
-          title="rating"
-          placeholder="4.9"
-        />
-        <div class="error" id="ratingError">
-          Please enter the rating between 1 and 5 inclusive.
+        <div id="park_location">
+          <label for="location">Location</label>
+          <input
+            type="text"
+            name="location"
+            id="location"
+            title="Park location"
+            placeholder="State, United States"
+          />
+          <div class="error" id="locationError">Please enter a location</div>
+        </div>
+        <div id="park_description">
+          <label for="parkDescription">Description</label>
+          <textarea name="description" id="parkDescription"></textarea>
+          <div class="error" id="descriptionError">
+            Please enter a short description
+          </div>
+        </div>
+        <div id="park_established">
+          <label for="established">Established</label>
+          <input
+            type="text"
+            name="established"
+            id="established"
+            title="Established"
+            placeholder="July 4, 1776"
+          />
+          <div class="error" id="establishedError">Please enter a date</div>
+        </div>
+        <div id="park_area">
+          <label for="area">Area</label>
+          <input
+            type="text"
+            name="area"
+            id="area"
+            title="Area"
+            placeholder="1 acre"
+          />
+          <div class="error" id="areaError">Please enter the area</div>
+        </div>
+        <div id="park_rating">
+          <label for="rating">Rating</label>
+          <input
+            type="number"
+            min="1"
+            max="5"
+            name="rating"
+            id="rating"
+            title="rating"
+            placeholder="4.9"
+          />
+          <div class="error" id="ratingError">
+            Please enter the rating between 1 and 5 inclusive.
+          </div>
         </div>
         <div class="formControl">
           <button type="submit" id="addBtn">Add</button>
@@ -89,21 +101,15 @@
         <div class="stats">
           <div class="established stat">
             <h3>Established</h3>
-            <div class="value">
-              June 28, 1980
-            </div>
+            <div class="value">June 28, 1980</div>
           </div>
           <div class="area stat">
             <h3>Area</h3>
-            <div class="value">
-              172,971 acres (699.99 km<sup>2</sup>)
-            </div>
+            <div class="value">172,971 acres (699.99 km<sup>2</sup>)</div>
           </div>
           <div class="rating stat">
             <h3>Rating</h3>
-            <div class="value">
-              4.7
-            </div>
+            <div class="value">4.7</div>
           </div>
         </div>
       </section>
@@ -123,9 +129,7 @@
         <div class="stats">
           <div class="established stat">
             <h3>Established</h3>
-            <div class="value">
-              February 26, 1919
-            </div>
+            <div class="value">February 26, 1919</div>
           </div>
           <div class="area stat">
             <h3>Area</h3>
@@ -133,9 +137,7 @@
           </div>
           <div class="rating stat">
             <h3>Rating</h3>
-            <div class="value">
-              4.8
-            </div>
+            <div class="value">4.8</div>
           </div>
         </div>
       </section>
@@ -153,9 +155,7 @@
         <div class="stats">
           <div class="established stat">
             <h3>Established</h3>
-            <div class="value">
-              February 22, 2018
-            </div>
+            <div class="value">February 22, 2018</div>
           </div>
           <div class="area stat">
             <h3>Area</h3>
@@ -163,9 +163,7 @@
           </div>
           <div class="rating stat">
             <h3>Rating</h3>
-            <div class="value">
-              4.7
-            </div>
+            <div class="value">4.7</div>
           </div>
         </div>
       </section>
@@ -184,9 +182,7 @@
         <div class="stats">
           <div class="established stat">
             <h3>Established</h3>
-            <div class="value">
-              February 15, 2019
-            </div>
+            <div class="value">February 15, 2019</div>
           </div>
           <div class="area stat">
             <h3>Area</h3>
@@ -194,9 +190,7 @@
           </div>
           <div class="rating stat">
             <h3>Rating</h3>
-            <div class="value">
-              4.6
-            </div>
+            <div class="value">4.6</div>
           </div>
         </div>
       </section>
