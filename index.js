@@ -1,24 +1,86 @@
+function validateExists(value) {
+  return value && value.trim();
+}
+
+function validateNumber(value) {
+  return !isNaN(value);
+}
+
+function validateRange(value, min, max) {
+  return value >= min && value <= max;
+}
+
+function validateForm(formData) {
+  const errors = {};
+
+  // check if name was entered
+  if (!validateExists(formData.get("name"))) {
+    errors.name = "Please enter a name";
+  }
+
+  // check if rating was entered
+  if (!validateExists(formData.get("rating"))) {
+    errors.rating = "Please enter a rating";
+  } else {
+    //check if the raying is a number
+    if (!validateNumber(formData.get("rating"))) {
+      errors.rating = "Rating must be a number";
+    } else {
+      // since it is a number, convert it
+      const rating = Number.parseFloat(formData.get("rating"));
+      //check that the rating is between 1 and 5 inclusive
+      if (!validateRange(rating, 1, 5)) {
+        errors.rating = "Rating must be between 1 and 5 inclusive";
+      }
+    }
+  }
+
+  // check if description was entered
+  if (!validateExists(formData.get("description"))) {
+    errors.description = "Please enter short description";
+  }
+
+  // check if established date was entered
+  if (!validateExists(formData.get("established"))) {
+    errors.established = "Please enter date";
+  }
+
+  // check if area was entered
+  if (!validateExists(formData.get("area"))) {
+    errors.area = "Please enter the area of the park";
+  }
+
+  // check if location date was entered
+  if (!validateExists(formData.get("location"))) {
+    errors.location = "Please enter the location of the park";
+  }
+  return errors;
+}
+
 const submitHandler = (event) => {
   event.preventDefault();
 
   const form = event.target;
   const formData = new FormData(form);
 
-  // Keep track of if any errors are found
-  let hasErrors = false;
+  const errors = validateForm(formData);
 
-  formData.forEach((value, key) => {
-    let errorId = `#${key.slice(4).toLowerCase()}Error`;
-    if (value.trim() === "") {
-      document.querySelector(errorId).style.display = "block";
-      hasErrors = true;
-    } else {
-      document.querySelector(errorId).style.display = "none";
-    }
+  // clear all previous errors
+  const errorElements = document.querySelectorAll(".error");
+  for (let element of errorElements) {
+    element.style.display = "none";
+  }
+
+  // display any new errors
+  Object.keys(errors).forEach((key) => {
+    // find the specific error element
+    const errorElement = document.querySelector(`#park_${key} .error`);
+    errorElement.innerHTML = errors[key];
+    errorElement.style.display = "block";
   });
 
   // if there are no errors
-  if (!hasErrors) {
+  if (!Object.keys(errors).length) {
     //create a new element
     const parkSection = document.createElement("section");
 
@@ -27,22 +89,22 @@ const submitHandler = (event) => {
 
     // construct the HTML for this element
     const content = `
-    <h2>${formData.get("parkName")}</h2>
-    <div class="location">${formData.get("parkLocation")}</div>
-    <div class="description">${formData.get("parkDescription")}</div>
+    <h2>${formData.get("name")}</h2>
+    <div class="location">${formData.get("location")}</div>
+    <div class="description">${formData.get("description")}</div>
     <button class="rateBtn" title="Add to Favourites">&#9734;</button>
     <div class="stats">
       <div class="established stat">
         <h3>Established</h3>
-        <div class="value">${formData.get("parkEstablished")}</div>
+        <div class="value">${formData.get("established")}</div>
       </div>
       <div class="area stat">
         <h3>Area</h3>
-        <div class="value">${formData.get("parkArea")}</div>
+        <div class="value">${formData.get("area")}</div>
       </div>
       <div class="rating stat">
         <h3>Rating</h3>
-        <div class="value">${formData.get("parkRating")}</div>
+        <div class="value">${formData.get("rating")}</div>
       </div>
     </div>
     `;
