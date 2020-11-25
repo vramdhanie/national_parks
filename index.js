@@ -10,6 +10,11 @@ function validateRange(value, min, max) {
   return value >= min && value <= max;
 }
 
+function validateDate(value) {
+  const date = moment(value);
+  return date.isValid();
+}
+
 function validateForm(formData) {
   const errors = {};
 
@@ -43,6 +48,12 @@ function validateForm(formData) {
   // check if established date was entered
   if (!validateExists(formData.get("established"))) {
     errors.established = "Please enter date";
+  } else {
+    // check if the value entered was a correct date
+    if (!validateDate(formData.get("established"))) {
+      errors.established =
+        "The date is not correctly formatted. (e.g. July 4, 1776)";
+    }
   }
 
   // check if area was entered
@@ -54,6 +65,7 @@ function validateForm(formData) {
   if (!validateExists(formData.get("location"))) {
     errors.location = "Please enter the location of the park";
   }
+
   return errors;
 }
 
@@ -96,7 +108,9 @@ const submitHandler = (event) => {
     <div class="stats">
       <div class="established stat">
         <h3>Established</h3>
-        <div class="value">${formData.get("established")}</div>
+        <div class="value">${moment(formData.get("established")).format(
+          "MMMM D, YYYY"
+        )}</div>
       </div>
       <div class="area stat">
         <h3>Area</h3>
