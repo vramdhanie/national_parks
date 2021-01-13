@@ -18,19 +18,14 @@ Fork this repository then clone your fork to your local machine.
 git clone https://github.com/<YOUR_GITHUB_USERNAME>/starter-national-parks.git
 ```
 
-Navigate to the folder containing the repository and start a local server. For example you may use _lite-server_.
+Navigate to the folder containing the repository and and open the folder in VS Code:
 
 ```bash
-npx lite-server
-```
-
-> **lite-server** is a lightweight _development only_ node server that serves a web app, opens it in the browser, and refreshes when html or javascript changes occur.
-
-Open the code in your favourite editor. For instance, to open VSCode:
-
-```bash
+cd starter-national-parks
 code .
 ```
+
+Using VSCode, run the website with the [Live Server extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) that you installed in an earlier module.
 
 ## Screen Shots
 
