@@ -86,7 +86,7 @@ const submitHandler = (event) => {
   // display any new errors
   Object.keys(errors).forEach((key) => {
     // find the specific error element
-    const errorElement = document.querySelector(`#park_${key} .error`);
+    const errorElement = document.querySelector(`#${key}-form .error`);
     errorElement.innerHTML = errors[key];
     errorElement.style.display = "block";
   });
@@ -97,26 +97,26 @@ const submitHandler = (event) => {
     const parkSection = document.createElement("section");
 
     // add the park class
-    parkSection.classList.add("park");
+    parkSection.classList.add("park-display");
 
     // construct the HTML for this element
     const content = `
     <h2>${formData.get("name")}</h2>
-    <div class="location">${formData.get("location")}</div>
-    <div class="description">${formData.get("description")}</div>
-    <button class="rateBtn" title="Add to Favourites">&#9734;</button>
+    <div class="location-display">${formData.get("location")}</div>
+    <div class="description-display">${formData.get("description")}</div>
+    <button class="rate-button" title="Add to Favourites">&#9734;</button>
     <div class="stats">
-      <div class="established stat">
+      <div class="established-display stat">
         <h3>Established</h3>
         <div class="value">${moment(formData.get("established")).format(
           "MMMM D, YYYY"
         )}</div>
       </div>
-      <div class="area stat">
+      <div class="area-display stat">
         <h3>Area</h3>
         <div class="value">${formData.get("area")}</div>
       </div>
-      <div class="rating stat">
+      <div class="rating-display stat">
         <h3>Rating</h3>
         <div class="value">${formData.get("rating")}</div>
       </div>
@@ -133,7 +133,7 @@ const submitHandler = (event) => {
 
 const main = () => {
   // get the form element
-  const form = document.querySelector("#parkForm");
+  const form = document.querySelector("#park-form");
 
   // attach the submit handler
   form.addEventListener("submit", submitHandler);
