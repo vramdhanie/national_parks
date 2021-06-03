@@ -29,7 +29,13 @@ main {
   max-width: 1400px;
 }
 
-.park {
+.sorter {
+  width: 90%;
+  margin: 0 auto;
+  padding: 6px;
+}
+
+.park-display {
   box-shadow: 0 0 3px 2px rgba(115, 66, 48, 0.2);
   border-radius: 6px;
   position: relative;
@@ -40,7 +46,7 @@ main {
   flex-direction: column;
 }
 
-.park > h2 {
+.park-display > h2 {
   background-color: #734230;
   color: #fcc988;
   padding: 4px;
@@ -50,13 +56,13 @@ main {
   margin-top: 0;
 }
 
-.location {
+.location-display {
   font-weight: 300;
   font-size: 0.8rem;
   padding-left: 4px;
 }
 
-.description {
+.description-display {
   margin-top: 4px;
   padding: 4px;
   flex: 1;
@@ -88,7 +94,7 @@ main {
   padding: 4px;
 }
 
-.rateBtn {
+.rate-button {
   position: absolute;
   top: 6px;
   right: 4px;
@@ -99,13 +105,13 @@ main {
   transition: all 0.5s;
 }
 
-.rateBtn:hover {
+.rate-button:hover {
   background: rgba(255, 255, 255, 0.1);
   border: solid 1px rgba(255, 255, 255, 0.5);
   color: rgba(255, 255, 255, 0.5);
 }
 
-.inputForm {
+.input-form {
   width: 90%;
   max-width: 350px;
   padding: 6px;
@@ -114,23 +120,23 @@ main {
   box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.3);
 }
 
-.inputForm label {
+.input-form label {
   font-weight: bold;
   display: block;
   margin-top: 4px;
 }
 
-.inputForm input,
-.inputForm textarea {
+.input-form input,
+.input-form textarea {
   width: 100%;
 }
 
-.inputForm .formControl {
+.input-form .form-control {
   padding: 6px;
   text-align: center;
 }
 
-.inputForm .error {
+.input-form .error {
   font-size: 0.8rem;
   color: #bb0000;
   display: none;
